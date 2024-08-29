@@ -22,7 +22,7 @@ defmodule KisiwoWeb.UsersLive.Index do
 
   defp apply_action(socket, :new, _params) do
     socket
-    |> assign(:page_title, "New Users")
+    |> assign(:page_title, "Neue Anmeldung")
     |> assign(:users, %Users{})
   end
 

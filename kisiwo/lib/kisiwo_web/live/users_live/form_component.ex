@@ -9,7 +9,7 @@ defmodule KisiwoWeb.UsersLive.FormComponent do
     <div>
       <.header>
         <%= @title %>
-        <:subtitle>Use this form to manage users records in your database.</:subtitle>
+        <:subtitle>Neue Anmeldung hier eintragen.</:subtitle>
       </.header>
 
       <.simple_form
@@ -23,29 +23,29 @@ defmodule KisiwoWeb.UsersLive.FormComponent do
         <.input field={@form[:nachname]} type="text" label="Nachname" />
         <.input field={@form[:straße]} type="text" label="Straße" />
         <.input field={@form[:hausnummer]} type="number" label="Hausnummer" />
-        <.input field={@form[:plz]} type="number" label="Plz" />
+        <.input field={@form[:plz]} type="number" label="PLZ" />
         <.input field={@form[:stadt]} type="text" label="Stadt" />
-        <.input field={@form[:email]} type="text" label="Email" />
-        <.input field={@form[:telefon_festnetz]} type="text" label="Telefon festnetz" />
-        <.input field={@form[:telefon_handy]} type="text" label="Telefon handy" />
-        <.input field={@form[:erreichbar]} type="text" label="Erreichbar" />
-        <.input field={@form[:vorname_kind]} type="text" label="Vorname kind" />
-        <.input field={@form[:nachname_kind]} type="text" label="Nachname kind" />
+        <.input field={@form[:email]} type="text" label="E-Mail" />
+        <.input field={@form[:telefon_festnetz]} type="text" label="Telefon Festnetz" />
+        <.input field={@form[:telefon_handy]} type="text" label="Telefon Handy" />
+        <.input field={@form[:erreichbar]} type="text" label="Erreichbarkeit" />
+        <.input field={@form[:vorname_kind]} type="text" label="Vorname Kind" />
+        <.input field={@form[:nachname_kind]} type="text" label="Nachname Kind" />
         <.input field={@form[:geburtstag]} type="date" label="Geburtstag" />
         <.input field={@form[:instrument]} type="text" label="Instrument" />
-        <.input field={@form[:allergien]} type="checkbox" label="Allergien" />
+        <.input field={@form[:allergien]} type="checkbox" label="Hat Ihr Kind Allergien?" />
         <.input
           field={@form[:schwimmer]}
           type="select"
           label="Schwimmer"
-          prompt="Choose a value"
+          prompt="-- Auswahl treffen --"
           options={Ecto.Enum.values(Kisiwo.Anmeldung.Users, :schwimmer)}
         />
         <.input
           field={@form[:essen]}
           type="select"
           label="Essen"
-          prompt="Choose a value"
+          prompt="-- Auswahl treffen --"
           options={Ecto.Enum.values(Kisiwo.Anmeldung.Users, :essen)}
         />
         <.input field={@form[:kommentar]} type="text" label="Kommentar" />
@@ -53,13 +53,13 @@ defmodule KisiwoWeb.UsersLive.FormComponent do
           field={@form[:fotos]}
           type="select"
           label="Fotos"
-          prompt="Choose a value"
+          prompt="-- Auswahl treffen --"
           options={Ecto.Enum.values(Kisiwo.Anmeldung.Users, :fotos)}
         />
-        <.input field={@form[:persoenliches_gespraech]} type="checkbox" label="Persoenliches gespraech" />
-        <.input field={@form[:teilnahmebedingungen]} type="checkbox" label="Teilnahmebedingungen" />
+        <.input field={@form[:persoenliches_gespraech]} type="checkbox" label="Ein persönliches Gespräch mit den Betreuern ist erwünscht" />
+        <.input field={@form[:teilnahmebedingungen]} type="checkbox" label="Die Teilnahmebedingungen werden akzeptiert."/>
         <:actions>
-          <.button phx-disable-with="Saving...">Save Users</.button>
+          <.button phx-disable-with="Saving...">Anmeldung speichern</.button>
         </:actions>
       </.simple_form>
     </div>

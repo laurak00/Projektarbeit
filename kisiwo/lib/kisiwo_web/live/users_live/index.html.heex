@@ -2,7 +2,7 @@
   Angemeldete Teilnehmer
   <:actions>
     <.link patch={~p"/users/new"}>
-      <.button>New Users</.button>
+      <.button>Neue Anmeldung</.button>
     </.link>
   </:actions>
 </.header>
@@ -10,8 +10,8 @@
 <.table
   id="users"
   rows={@streams.users_collection}
-  row_click={fn {_id, users} -> JS.navigate(~p"/users/#{users}") end}
->
+  row_click={fn {_id, users} -> JS.navigate(~p"/users/#{users}") end}>
+
   <:col :let={{_id, users}} label="Vorname"><%= users.vorname %></:col>
   <:col :let={{_id, users}} label="Nachname"><%= users.nachname %></:col>
   <:col :let={{_id, users}} label="Straße"><%= users.straße %></:col>
@@ -19,9 +19,9 @@
   <:col :let={{_id, users}} label="PLZ"><%= users.plz %></:col>
   <:col :let={{_id, users}} label="Stadt"><%= users.stadt %></:col>
   <:col :let={{_id, users}} label="Email"><%= users.email %></:col>
-  <:col :let={{_id, users}} label="Telefon Festnetz"><%= users.telefon_festnetz %></:col>
-  <:col :let={{_id, users}} label="Telefon Handy"><%= users.telefon_handy %></:col>
-  <:col :let={{_id, users}} label="Erreichbar"><%= users.erreichbar %></:col>
+  <:col :let={{_id, users}} label="Festnetz"><%= users.telefon_festnetz %></:col>
+  <:col :let={{_id, users}} label="Handy"><%= users.telefon_handy %></:col>
+  <:col :let={{_id, users}} label="Erreichbarkeit"><%= users.erreichbar %></:col>
   <:col :let={{_id, users}} label="Vorname Kind"><%= users.vorname_kind %></:col>
   <:col :let={{_id, users}} label="Nachname Kind"><%= users.nachname_kind %></:col>
   <:col :let={{_id, users}} label="Geburtstag"><%= users.geburtstag %></:col>
