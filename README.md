@@ -1,2 +1,0 @@
-# Projektarbeit
-SS2024

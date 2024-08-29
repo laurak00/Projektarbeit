@@ -1,0 +1,46 @@
+<.header>
+  Anmeldung <%= @users.id %>
+  <:subtitle>Detailansicht Anmeldung</:subtitle>
+  <:actions>
+    <.link patch={~p"/users/#{@users}/show/edit"} phx-click={JS.push_focus()}>
+      <.button>Edit users</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Vorname"><%= @users.vorname %></:item>
+  <:item title="Nachname"><%= @users.nachname %></:item>
+  <:item title="Straße"><%= @users.straße %></:item>
+  <:item title="Hausnummer"><%= @users.hausnummer %></:item>
+  <:item title="PLZ"><%= @users.plz %></:item>
+  <:item title="Stadt"><%= @users.stadt %></:item>
+  <:item title="Email"><%= @users.email %></:item>
+  <:item title="Telefon Festnetz"><%= @users.telefon_festnetz %></:item>
+  <:item title="Telefon Handy"><%= @users.telefon_handy %></:item>
+  <:item title="Erreichbar"><%= @users.erreichbar %></:item>
+  <:item title="Vorname Kind"><%= @users.vorname_kind %></:item>
+  <:item title="Nachname Kind"><%= @users.nachname_kind %></:item>
+  <:item title="Geburtstag"><%= @users.geburtstag %></:item>
+  <:item title="Instrument"><%= @users.instrument %></:item>
+  <:item title="Allergien"><%= @users.allergien %></:item>
+  <:item title="Schwimmer"><%= @users.schwimmer %></:item>
+  <:item title="Essen"><%= @users.essen %></:item>
+  <:item title="Kommentar"><%= @users.kommentar %></:item>
+  <:item title="Fotos"><%= @users.fotos %></:item>
+  <:item title="Persönliches Gespräch"><%= @users.persoenliches_gespraech %></:item>
+  <:item title="Teilnahmebedingungen"><%= @users.teilnahmebedingungen %></:item>
+</.list>
+
+<.back navigate={~p"/users"}>Back to users</.back>
+
+<.modal :if={@live_action == :edit} id="users-modal" show on_cancel={JS.patch(~p"/users/#{@users}")}>
+  <.live_component
+    module={KisiwoWeb.UsersLive.FormComponent}
+    id={@users.id}
+    title={@page_title}
+    action={@live_action}
+    users={@users}
+    patch={~p"/users/#{@users}"}
+  />
+</.modal>

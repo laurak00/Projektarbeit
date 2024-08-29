@@ -1,0 +1,61 @@
+<.header>
+  Angemeldete Teilnehmer
+  <:actions>
+    <.link patch={~p"/users/new"}>
+      <.button>New Users</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.table
+  id="users"
+  rows={@streams.users_collection}
+  row_click={fn {_id, users} -> JS.navigate(~p"/users/#{users}") end}
+>
+  <:col :let={{_id, users}} label="Vorname"><%= users.vorname %></:col>
+  <:col :let={{_id, users}} label="Nachname"><%= users.nachname %></:col>
+  <:col :let={{_id, users}} label="Straße"><%= users.straße %></:col>
+  <:col :let={{_id, users}} label="Hausnummer"><%= users.hausnummer %></:col>
+  <:col :let={{_id, users}} label="PLZ"><%= users.plz %></:col>
+  <:col :let={{_id, users}} label="Stadt"><%= users.stadt %></:col>
+  <:col :let={{_id, users}} label="Email"><%= users.email %></:col>
+  <:col :let={{_id, users}} label="Telefon Festnetz"><%= users.telefon_festnetz %></:col>
+  <:col :let={{_id, users}} label="Telefon Handy"><%= users.telefon_handy %></:col>
+  <:col :let={{_id, users}} label="Erreichbar"><%= users.erreichbar %></:col>
+  <:col :let={{_id, users}} label="Vorname Kind"><%= users.vorname_kind %></:col>
+  <:col :let={{_id, users}} label="Nachname Kind"><%= users.nachname_kind %></:col>
+  <:col :let={{_id, users}} label="Geburtstag"><%= users.geburtstag %></:col>
+  <:col :let={{_id, users}} label="Instrument"><%= users.instrument %></:col>
+  <:col :let={{_id, users}} label="Allergien"><%= users.allergien %></:col>
+  <:col :let={{_id, users}} label="Schwimmer"><%= users.schwimmer %></:col>
+  <:col :let={{_id, users}} label="Essen"><%= users.essen %></:col>
+  <:col :let={{_id, users}} label="Kommentar"><%= users.kommentar %></:col>
+  <:col :let={{_id, users}} label="Fotos"><%= users.fotos %></:col>
+  <:col :let={{_id, users}} label="Persönliches Gespräch"><%= users.persoenliches_gespraech %></:col>
+  <:col :let={{_id, users}} label="Teilnahmebedingungen"><%= users.teilnahmebedingungen %></:col>
+  <:action :let={{_id, users}}>
+    <div class="sr-only">
+      <.link navigate={~p"/users/#{users}"}>Show</.link>
+    </div>
+    <.link patch={~p"/users/#{users}/edit"}>Edit</.link>
+  </:action>
+  <:action :let={{id, users}}>
+    <.link
+      phx-click={JS.push("delete", value: %{id: users.id}) |> hide("##{id}")}
+      data-confirm="Are you sure?"
+    >
+      Delete
+    </.link>
+  </:action>
+</.table>
+
+<.modal :if={@live_action in [:new, :edit]} id="users-modal" show on_cancel={JS.patch(~p"/users")}>
+  <.live_component
+    module={KisiwoWeb.UsersLive.FormComponent}
+    id={@users.id || :new}
+    title={@page_title}
+    action={@live_action}
+    users={@users}
+    patch={~p"/users"}
+  />
+</.modal>
