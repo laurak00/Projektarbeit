@@ -39,9 +39,9 @@
     </div>
     <.link patch={~p"/users/#{users}/edit"}>Edit</.link>
   </:action>
-  <:action :let={{id, users}}>
+  <:action :let={{_id, users}}>
     <.link
-      phx-click={JS.push("delete", value: %{id: users.id}) |> hide("##{id}")}
+      phx-click={JS.push("delete", value: %{id: users.id}) |> hide("##{_id}")}
       data-confirm="Are you sure?"
     >
       Delete
@@ -59,3 +59,7 @@
     patch={~p"/users"}
   />
 </.modal>
+
+<.link patch={~p"/"} class="back-button">
+    <.button>Zurück zur Startseite</.button>
+  </.link>

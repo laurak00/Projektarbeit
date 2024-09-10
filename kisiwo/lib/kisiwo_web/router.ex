@@ -25,6 +25,10 @@ defmodule KisiwoWeb.Router do
 
     live "/users/:id", UsersLive.Show, :show
     live "/users/:id/show/edit", UsersLive.Show, :edit
+
+    get "/kisiwo", PageController, :kisiwo
+    get "/team", PageController, :team
+    get "/contact", PageController, :contact
   end
 
   # Other scopes may use custom stacks.
