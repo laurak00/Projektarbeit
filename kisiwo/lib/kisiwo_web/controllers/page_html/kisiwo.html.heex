@@ -1,72 +1,57 @@
-<!DOCTYPE html>
-<%!-- <html lang="de-DE"> --%>
+<!DOCTYPE html> <%!-- <html lang="de-DE"> --%>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
   <title>KiSiWo | Musische Freizeit für Kinder von 9 - 15 Jahren</title>
 </head>
 
 <body>
   <header id="branding">
-    <hgroup>
-      <h1 id="site-title">
-        <span>
-          <a href="/" rel="home">Kisiwo</a>
-        </span>
-      </h1>
-      <h2 id="site-despription">Musische Freizeit für Kinder von 9 - 15 Jahren</h2>
-    </hgroup>
     <div class="entry-content">
-    <a href="/">
-      <img src={~p"/images/Header_021.jpg"}>
-    </a>
+      <a href="/">
+        <img style="height: 300px;  display: block; margin-left: auto; margin-right: auto;"
+        src={~p"/images/Header_021.jpg"} />
+      </a>
     </div>
 
-    <nav id="access">
-      <h3 class="assistive-text">Hauptmenue</h3>
-      <div class="menu-menue-container">
-        <ul id="menu-menue" class="menu">
-          <li id="menu-item-35" class="menu-item menu-item-type-post_type">
-            <a href="/" aria-current="page">WILLKOMMEN</a>
-          </li>
-          <li id="menu-item-36" class="menu-item menu-item-type-post_type">
-            <a href="/kisiwo" aria-current="page">DIE KISIWO</a>
-          </li>
-          <li id="menu-item-37" class="menu-item menu-item-type-post_type">
-            <a href="/team" aria-current="page">DAS TEAM</a>
-          </li>
-          <li id="menu-item-35" class="menu-item menu-item-type-post_type">
-            <a href="/contact" aria-current="page">KONTAKT</a>
-          </li>
-        </ul>
-
-      </div>
-    </nav>
+    <div style="text-align: center">
+      <.link patch={~p"/"}>
+        <.button>WILLKOMMEN</.button>
+      </.link>
+      <.link patch={~p"/kisiwo"}>
+        <.button>DIE KISIWO</.button>
+      </.link>
+      <.link patch={~p"/team"}>
+        <.button>DAS TEAM</.button>
+      </.link>
+      <.link patch={~p"/contact"}>
+        <.button>KONTAKT</.button>
+      </.link>
+    </div>
   </header>
 
-
-<div style="text-align: center">
+  <div style="text-align: center">
     <header class="entry-header">
-        <h1 class="entry-title" style="font-family: Kisiwo;">Kisiwo</h1>
+      <h1 class="entry-title m-3" style="font-family: Kisiwo;">Kisiwo</h1>
     </header>
 
     <div class="entry-content">
-        <p style = "max-width: 500px; margin-left: auto; margin-right: auto;">
-            <span>Auf der <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong>
-            - das ist die Abkürzung für Kinder-Sing-Woche - wird genau das gemacht: Eine Woche lang singen, tanzen und musizieren
-            etwa 30 Kinder gemeinsam mit den Betreuerinnen und Betreuern. Jedes Jahr steht die <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong> 
-            unter einem anderen bunten Motto, das das Programm und die Aktivitäten einrahmt. 
-            <br>
-            Beim Musizieren sind wir in verschiedenen Ensembles organisiert, aber für ein ganz besonderes Stück kommen dann alle
-            Musikanten im großen <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong>-Orchester zusammen. Auch das Singen und 
-            Tanzen findet in Großer Runde statt, bei Sonnenwetter mit Vorliebe im Garten und manchmal auch einfach zum Spaß mal zwischendurch. 
-            <br>
-            Während der Woche werden dann Feste gefeiert, Wald und Wiesen im Geländespiel erobert, Lagerfeuer entzündet, Gitarren ausgepackt. 
-            Auch Ausflüge mit Badevergnügen kommen nicht zu kurz und bei all dem wird die lustige Truppe stets von tollen Spielen, 
-            bunten Bastel- und Malaktionen, lustigen Liedern und schönen Geschichten begleitet und vieles, vieles mehr...
-            </span>
-        </p>
+      <p style="max-width: 500px; margin-left: auto; margin-right: auto;">
+        <span>
+          Auf der <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong>
+          - das ist die Abkürzung für Kinder-Sing-Woche - wird genau das gemacht: Eine Woche lang singen, tanzen und musizieren
+          etwa 30 Kinder gemeinsam mit den Betreuerinnen und Betreuern. Jedes Jahr steht die
+          <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong>
+          unter einem anderen bunten Motto, das das Programm und die Aktivitäten einrahmt. <br />
+          Beim Musizieren sind wir in verschiedenen Ensembles organisiert, aber für ein ganz besonderes Stück kommen dann alle
+          Musikanten im großen <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong>-Orchester zusammen. Auch das Singen und
+          Tanzen findet in Großer Runde statt, bei Sonnenwetter mit Vorliebe im Garten und manchmal auch einfach zum Spaß mal zwischendurch.
+          <br />
+          Während der Woche werden dann Feste gefeiert, Wald und Wiesen im Geländespiel erobert, Lagerfeuer entzündet, Gitarren ausgepackt.
+          Auch Ausflüge mit Badevergnügen kommen nicht zu kurz und bei all dem wird die lustige Truppe stets von tollen Spielen,
+          bunten Bastel- und Malaktionen, lustigen Liedern und schönen Geschichten begleitet und vieles, vieles mehr...
+        </span>
+      </p>
     </div>
   </div>
-
 </body>

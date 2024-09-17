@@ -1,69 +1,57 @@
-<!DOCTYPE html>
-<%!-- <html lang="de-DE"> --%>
+<!DOCTYPE html> <%!-- <html lang="de-DE"> --%>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
   <title>KiSiWo | Musische Freizeit für Kinder von 9 - 15 Jahren</title>
 </head>
 
-<body> 
-    <header id="branding">
-        <hgroup>
-            <h1 id="site-title">
-                <span>
-                <a href="/" rel="home">Kisiwo</a>
-                </span>
-            </h1>
-            <h2 id="site-despription">Musische Freizeit für Kinder von 9 - 15 Jahren</h2>
-        </hgroup>
-        <div class="entry-content">
-        <a href="/">
-        <img src={~p"/images/Header_041.jpg"}>
-        </a>
-        </div>
+<body>
+  <header id="branding">
+    <div class="entry-content">
+      <a href="/">
+        <img style="height: 300px;  display: block; margin-left: auto; margin-right: auto;"
+        src={~p"/images/Header_041.jpg"} />
+      </a>
+    </div>
 
-        <nav id="access">
-        <h3 class="assistive-text">Hauptmenue</h3>
-        <div class="menu-menue-container">
-            <ul id="menu-menue" class="menu">
-            <li id="menu-item-35" class="menu-item menu-item-type-post_type">
-                <a href="/" aria-current="page">WILLKOMMEN</a>
-            </li>
-            <li id="menu-item-36" class="menu-item menu-item-type-post_type">
-                <a href="/kisiwo" aria-current="page">DIE KISIWO</a>
-            </li>
-            <li id="menu-item-37" class="menu-item menu-item-type-post_type">
-                <a href="/team" aria-current="page">DAS TEAM</a>
-            </li>
-            <li id="menu-item-35" class="menu-item menu-item-type-post_type">
-                <a href="/contact" aria-current="page">KONTAKT</a>
-            </li>
-            </ul>
-
-        </div>
-        </nav>
+    <div style="text-align: center">
+      <.link patch={~p"/"}>
+        <.button>WILLKOMMEN</.button>
+      </.link>
+      <.link patch={~p"/kisiwo"}>
+        <.button>DIE KISIWO</.button>
+      </.link>
+      <.link patch={~p"/team"}>
+        <.button>DAS TEAM</.button>
+      </.link>
+      <.link patch={~p"/contact"}>
+        <.button>KONTAKT</.button>
+      </.link>
+    </div>
   </header>
 
   <div style="text-align: center">
     <header class="entry-header">
-        <h1 class="entry-title" style="font-family: Kisiwo;">Das Team</h1>
+      <h1 class="entry-title m-3" style="font-family: Kisiwo;">Das Team</h1>
     </header>
 
     <div class="entry-content">
-        <p style = "max-width: 500px; margin-left: auto; margin-right: auto;">
-            <span>Das Betreuerteam der <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong>
-            besteht selbst aus lauter ehemaligen <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong> 
-            -Kinder. Deshalb wissen sie auch so gut, was den Kindern gefällt und was eine echte 
-            <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong> ausmacht: gemeinsames Singen, Tanzen und Musizieren und
-            dabei viel Spaß haben. Das ist auch das Anliegen des Ensembles Moravia Cantat, bei dem einige Betreuerinnen und Betreuer 
-            selbst Mitglieder sind. Diese Gruppe lebt die Idee der Jugend-Musik-Bewegung, die Verknüpfung von Alltag und Musik. 
-            Dazu treffen sich die Mitglieder einmal im Monat zu einem Probenwochenende im Raum Stuttgart. Dort entsteht eine Verbindung
-            von gemeinschaftlichem Leben und Kunst, die wir gerne auch mit den Kindern auf der 
-            <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong> teilen wollen.
-            </span>
-        </p>
+      <p style="max-width: 500px; margin-left: auto; margin-right: auto;">
+        <span>
+          Das Betreuerteam der <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong>
+          besteht selbst aus lauter ehemaligen
+          <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong>
+          -Kinder. Deshalb wissen sie auch so gut, was den Kindern gefällt und was eine echte
+          <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong>
+          ausmacht: gemeinsames Singen, Tanzen und Musizieren und
+          dabei viel Spaß haben. Das ist auch das Anliegen des Ensembles Moravia Cantat, bei dem einige Betreuerinnen und Betreuer
+          selbst Mitglieder sind. Diese Gruppe lebt die Idee der Jugend-Musik-Bewegung, die Verknüpfung von Alltag und Musik.
+          Dazu treffen sich die Mitglieder einmal im Monat zu einem Probenwochenende im Raum Stuttgart. Dort entsteht eine Verbindung
+          von gemeinschaftlichem Leben und Kunst, die wir gerne auch mit den Kindern auf der
+          <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong>
+          teilen wollen.
+        </span>
+      </p>
     </div>
-
-    </div>
-
+  </div>
 </body>

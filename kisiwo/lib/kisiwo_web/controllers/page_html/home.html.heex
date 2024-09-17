@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html lang="de-DE">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <title>KiSiWo | Musische Freizeit für Kinder von 9 - 15 Jahren</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>KiSiWo | Musische Freizeit für Kinder von 9 - 15 Jahren</title>
 
-<body>
-  <header id="branding">
-    <hgroup>
-      <h1 id="site-title">
-        <span>
-          <a href="/" rel="home">Kisiwo</a>
-        </span>
-      </h1>
-      <h2 id="site-despription">Musische Freizeit für Kinder von 9 - 15 Jahren</h2>
-    </hgroup>
-    <div class="entry-content">
-    <a href="/">
-      <img src={~p"/images/Header_011.jpg"}>
-    </a>
-    </div>
+  </head>
 
+  <body>
+    <header id="branding">
+      <div class="entry-content">
+        <a href="/">
+          <img style="height: 300px;  display: block; margin-left: auto; margin-right: auto;"
+          src={~p"/images/Header_011.jpg"} />
+        </a>
+      </div>
+
+      <%!-- 
     <nav id="access">
       <h3 class="assistive-text">Hauptmenue</h3>
       <div class="menu-menue-container">
@@ -41,41 +36,67 @@
         </ul>
 
       </div>
-    </nav>
-  </header>
+    </nav> --%>
 
-
-
-  <div style="text-align: center">
-    <header class="entry-header">
-      <h1 class="entry-header m-5">WILLKOMMEN</h1>
+      <div style="text-align: center">
+        <.link patch={~p"/"}>
+          <.button>WILLKOMMEN</.button>
+        </.link>
+        <.link patch={~p"/kisiwo"}>
+          <.button>DIE KISIWO</.button>
+        </.link>
+        <.link patch={~p"/team"}>
+          <.button>DAS TEAM</.button>
+        </.link>
+        <.link patch={~p"/contact"}>
+          <.button>KONTAKT</.button>
+        </.link>
+      </div>
     </header>
-    <div class="entry-content">
-    <img style="height: 300px;  display: block; margin-left: auto; margin-right: auto;" 
-      src={~p"/images/kisiwo_2024_titelbild1.jpg"} alt="Titelbild KiSiWo 2024">
+
+    <div style="text-align: center">
+      <header class="entry-header">
+        <h1 class="entry-header m-5">WILLKOMMEN</h1>
+      </header>
+      <div class="entry-content">
+        <img
+          style="height: 300px;  display: block; margin-left: auto; margin-right: auto;"
+          src={~p"/images/kisiwo_2024_titelbild1.jpg"}
+          alt="Titelbild KiSiWo 2024"
+        />
+      </div>
+
+      <p>
+        <strong>
+          <strong><span class="m-3" style="font-family: Kisiwo;">Liebe Kinder!</span></strong>
+        </strong>
+      </p>
+
+      <p class="m-3" style="max-width: 500px; margin-left: auto; margin-right: auto;">
+        <span style="font-family: Palatino;">
+          Herzlich willkommen auf der Seite der <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong>.
+          Hier findet Ihr alle möglichen Informationen über die 42.
+          <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong>
+          vom 04. - 10. August 2024,
+          über die Betreuer, Bilder von den alten
+          <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong>
+          und vieles, vieles mehr.
+        </span>
+      </p>
+
+      <.link patch={~p"/users/new"}>
+        <.button>Hier geht es zur Online Anmeldung</.button>
+      </.link>
+
+      <%!-- <blockquote>
+        <a
+          class="border-2 border-rose-600 p-1"
+          style="max-width: 500px; margin-left: auto; margin-right: auto;"
+          href="/users/new"
+        >
+          Hier geht es zur Online Anmeldung
+        </a>
+      </blockquote> --%>
     </div>
-
-    <p >
-      <strong>
-      <strong><span class="m-3" style="font-family: Kisiwo;">Liebe Kinder!</span></strong>
-      </strong>
-      
-    </p>
-
-    <p class="m-3" style = "max-width: 500px; margin-left: auto; margin-right: auto;">
-      <span  style="font-family: Palatino;">
-        Herzlich willkommen auf der Seite der   <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong>. 
-        Hier findet Ihr alle möglichen Informationen über die 42. 
-         <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong> vom 04. - 10. August 2024, 
-         über die Betreuer, Bilder von den alten  <strong><span style="font-family: Kisiwo;">Kisiwo</span></strong> 
-         und vieles, vieles mehr. 
-      </span>
-    </p>
-
-    <blockquote  >
-      <a class= "border-2 border-rose-600 p-1" style="max-width: 500px; margin-left: auto; margin-right: auto;" href="/users/new">Hier geht es zur Online Anmeldung</a>
-
-    </blockquote>
-  </div>
-</body>
+  </body>
 </html>
