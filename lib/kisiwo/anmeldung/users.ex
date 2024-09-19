@@ -19,7 +19,7 @@ defmodule Kisiwo.Anmeldung.Users do
     field :instrument, :string
     field :allergien, :boolean, default: false
     field :schwimmer, Ecto.Enum, values: [:Schwimmer, :Nichtschwimmer]
-    field :essen, Ecto.Enum, values: [:alles, :vegetarisch, :vegan, :unvertraeglichkeit]
+    field :essen, Ecto.Enum, values: [:alles, :vegetarisch, :vegan, :Unverträglichkeit]
     field :kommentar, :string
     field :fotos, Ecto.Enum, values: [:veroeffentlicht, :nichtveroeffentlicht]
     field :persoenliches_gespraech, :boolean, default: false
