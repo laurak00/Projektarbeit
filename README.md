@@ -15,6 +15,7 @@ Die Webanwendung stellt die Webseite der KiSiWo (Kinder-Sing-Woche) nach. Weil i
 5. [Implementierte Inhalte](#implementierte-inhalte)
 6. [Erfahrungen](#meine-erfahrungen)
 7. [Bekannte Herausforderungen](#schwierigkeiten)
+8. [Informationsquellen](#informationsquellen)
 
 ## Einrichten der Umgebung
 
@@ -73,3 +74,16 @@ Was mir besonders gefallen hat:
 ### Schwierigkeiten
 
 Für mich war es teilweise herausfordernd, aktuelle Anleitung zu finden. Letztendlich hat sich die offizielle Dokumentation von Elixir und Phoenix als beste Einarbeitungsmöglichkeit erwiesen.
+
+
+## Informationsquellen
+
+1. Elixir Guides: https://hexdocs.pm/elixir/introduction.html
+2. Elixir Schule: https://elixirschool.com/en
+3. Phoenix Guides: https://hexdocs.pm/phoenix/overview.html
+4. Ecto Guides: https://hexdocs.pm/ecto/Ecto.html
+
+### Videos
+
+1. Elixir Programming Introduction: https://www.youtube.com/watch?v=-lgtb-YSUWE
+2. Simple Phoenix Web application: https://www.youtube.com/watch?v=e4JX2JAw4Ok
