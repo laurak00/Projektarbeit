@@ -4,18 +4,27 @@ Diese Webanwendung ist in Rahmen der Projektarbeit zum Thema **Web-Entwicklung m
 
 ## Thema der Webanwendung
 
-Die Webanwendung stellt die Webseite der KiSiWo (Kinder-Sing-Woche) nach. Weil ich nicht nur als Betreuerin bei dieser Kinder- und Jugendfreizeit mitwirke und mich im Trägerverein Moravia Cantat engagiere, sondern auch für die regelmäßige Aktualisierung der Webseite zuständig bin. 
+Die Webanwendung orientiert sich an der Webseite der KiSiWo (Kinder-Sing-Woche). Weil ich nicht nur als Betreuerin bei dieser Kinder- und Jugendfreizeit mitwirke und mich im Trägerverein Moravia Cantat engagiere, sondern auch für die regelmäßige Aktualisierung der Webseite zuständig bin. <br>
+Ich habe für diese Projektarbeit einen Laptop mit Fedora (Linux) verwendet. 
 
 ## Inhaltsverzeichnis
 
-1. [Einrichten der Umgebung](#einrichten-der-umgebung)
-2. [Erstellen eines neuen Projekts](#erstellen-eines-neuen-projekts)
-3. [Datenbank einrichten](#datenbank-einrichten)
-4. [Webanwendung starten](#webanwendung-starten)
-5. [Implementierte Inhalte](#implementierte-inhalte)
-6. [Erfahrungen](#meine-erfahrungen)
-7. [Bekannte Herausforderungen](#schwierigkeiten)
-8. [Informationsquellen](#informationsquellen)
+1. [Software Stack](#software-stack)
+2. [Einrichten der Umgebung](#einrichten-der-umgebung)
+3. [Erstellen eines neuen Projekts](#erstellen-eines-neuen-projekts)
+4. [Datenbank einrichten](#datenbank-einrichten)
+5. [Webanwendung starten](#webanwendung-starten)
+6. [Implementierte Inhalte](#implementierte-inhalte)
+7. [Erfahrungen](#meine-erfahrungen)
+8. [Bekannte Herausforderungen](#schwierigkeiten)
+9. [Informationsquellen](#informationsquellen)
+
+## Software Stack
+
+- Elixir
+- Phoenix
+- Ecto (ORM von Phoenix)
+- Tailwind
 
 ## Einrichten der Umgebung
 
@@ -67,13 +76,16 @@ Die Webanwendung orientiert sich stark am Vorbild der Orginalseite und umfasst f
 
 ### Positives
 
-Was mir besonders gefallen hat:
-1. Mit nur einem Befehl (`mix phx.new _name_`) kann ein neues Projekt mit vorkonfigurierten Ordnerstrukture und allen nötigen Dateien erstellt werden. 
-2. Mit `mix phx.gen.live _Kontext_ _Schema_ _tableOnTheDatabase_` kann eine neue Datenbanktabelle samt zugehöriger Seite erstellt werden. Die Automatisch generierten Befehle müssen nur noch in die Datei `router.ex` kopiert und die Datenbank migriert werden - und die Seite ist einsatzbereit. 
+- Mit einem Befehl (`mix phx.new _name_`) kann ein neues Projekt mit vorkonfigurierten Ordnerstrukture und allen nötigen Dateien erstellt werden. 
+- Mit `mix phx.gen.live _Kontext_ _Schema_ _tableOnTheDatabase_` kann eine neue Datenbanktabelle samt zugehöriger Seite erstellt werden. Die Automatisch generierten Befehle müssen nur noch in die Datei `router.ex` kopiert und die Datenbank migriert werden - und die Seite ist einsatzbereit. 
+- erstellen von bestimmten HTML Inhalten ist einfach
 
 ### Schwierigkeiten
 
-Für mich war es teilweise herausfordernd, aktuelle Anleitung zu finden. Letztendlich hat sich die offizielle Dokumentation von Elixir und Phoenix als beste Einarbeitungsmöglichkeit erwiesen.
+- Für mich war es teilweise herausfordernd, aktuelle Anleitung zu finden. Letztendlich hat sich die offizielle Dokumentation von Elixir und Phoenix als beste Einarbeitungsmöglichkeit erwiesen.
+- Erlang und Elixir zu installieren und die IDE zum Laufen zu bekommen
+- das Erlernen von Elixir und Phoenix hat viel Zeit gekostet 
+- Einbindung des ORM ins Projekt
 
 
 ## Informationsquellen
